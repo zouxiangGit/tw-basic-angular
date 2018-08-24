@@ -7,6 +7,7 @@ import { RouterModule } from '@angular/router';
 import { LifecycleModule } from './lifecycle/lifecycle.module';
 import { SharedModule } from './shared/shared.module';
 import { ComponentInteractionModule } from './component-interaction/component-interaction.module';
+import { DirectiveModule } from './directive/directive.module';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { ComponentInteractionModule } from './component-interaction/component-in
     SharedModule,
     TemplateSyntaxModule,
     LifecycleModule,
-    ComponentInteractionModule
+    ComponentInteractionModule,
+    DirectiveModule
   ],
   providers: [],
   bootstrap: [AppComponent]
