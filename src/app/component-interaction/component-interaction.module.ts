@@ -1,19 +1,20 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { LoggerService } from '../shared/logger.service';
 import { RouterModule } from '@angular/router';
 import { ExerciseComponent } from './exercise/exercise.component';
-import { ItemComponent } from './exercise/item/item.component';
-import { LoggerService } from '../shared/logger.service';
+import { ParentComponent } from './exercise/parent/parent.component';
+import { ChildComponent } from './exercise/child/child.component';
 
 @NgModule({
   imports: [
     CommonModule,
     RouterModule.forRoot([{
-      path: 'lifecycle',
+      path: 'component-interaction',
       component: ExerciseComponent
     }])
   ],
   providers: [LoggerService],
-  declarations: [ExerciseComponent, ItemComponent]
+  declarations: [ExerciseComponent, ParentComponent, ChildComponent]
 })
-export class LifecycleModule { }
+export class ComponentInteractionModule { }

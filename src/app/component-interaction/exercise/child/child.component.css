@@ -1,0 +1,24 @@
+main {
+  background-color: #ddd;
+  margin: 20px;
+  padding: 10px 20px 20px;
+}
+
+.block-section {
+  margin-bottom: 30px;
+  padding: 5px 5px 0;
+  width: 200px;
+  display: flex;
+  flex-wrap: wrap;
+  border: 1px solid black;
+}
+
+.block {
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  background-color: coral;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  text-align: center;
+}

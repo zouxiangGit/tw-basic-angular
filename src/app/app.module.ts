@@ -5,6 +5,8 @@ import { AppComponent } from './app.component';
 import { TemplateSyntaxModule } from './template-syntax/template-syntax.module';
 import { RouterModule } from '@angular/router';
 import { LifecycleModule } from './lifecycle/lifecycle.module';
+import { SharedModule } from './shared/shared.module';
+import { ComponentInteractionModule } from './component-interaction/component-interaction.module';
 
 @NgModule({
   declarations: [
@@ -13,8 +15,10 @@ import { LifecycleModule } from './lifecycle/lifecycle.module';
   imports: [
     BrowserModule,
     RouterModule,
+    SharedModule,
     TemplateSyntaxModule,
-    LifecycleModule
+    LifecycleModule,
+    ComponentInteractionModule
   ],
   providers: [],
   bootstrap: [AppComponent]

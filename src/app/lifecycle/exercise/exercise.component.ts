@@ -1,11 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { LoggerService } from '../logger.service';
+import { LoggerService } from '../../shared/logger.service';
 
 @Component ({
   selector: 'app-lifecycle-exercise',
   templateUrl: './exercise.component.html',
   styleUrls: [ './exercise.component.css' ],
-  providers: [ LoggerService ]
 })
 export class ExerciseComponent implements OnInit {
   item = 'name';

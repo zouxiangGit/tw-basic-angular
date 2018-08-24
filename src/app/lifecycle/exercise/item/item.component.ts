@@ -9,7 +9,7 @@ import {
   OnInit,
   SimpleChanges
 } from '@angular/core';
-import { LoggerService } from '../../logger.service';
+import { LoggerService } from '../../../shared/logger.service';
 
 @Component({
   selector: 'app-lifecycle-exercise-item',
