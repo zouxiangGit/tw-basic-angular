@@ -5,9 +5,9 @@ import { Component, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChange
   templateUrl: './child.component.html',
   styleUrls: ['./child.component.css']
 })
-export class ChildComponent implements OnInit, OnChanges {
-  @Input() step;
-  @Output() quit = new EventEmitter<any>();
+export class ChildComponent implements OnInit {
+  step = 0;
+  isQuited = false;
   stepArray = [];
 
   constructor() { }
@@ -16,12 +16,18 @@ export class ChildComponent implements OnInit, OnChanges {
 
   }
 
-  ngOnChanges ( changes: SimpleChanges ): void {
+  onQuit() {
+    this.isQuited = true;
+  }
+
+  nextStep() {
+    this.step += 1;
     this.stepArray = Array.from(new Array(this.step), (val, index) => index);
   }
 
-  onQuit() {
-    this.quit.emit();
+  startOver() {
+    this.step = 0;
+    this.isQuited = false;
+    this.stepArray = [];
   }
-
 }
