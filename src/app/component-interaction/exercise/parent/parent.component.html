@@ -1,7 +1,7 @@
 <h4>Parent Component</h4>
 
-<button (click)="nextStep()" [disabled]="isQuited">Next Step</button>
+<button (click)="nextStep()" [disabled]="isQuited()">Next Step</button>
 <button (click)="startOver()">Start Over</button>
 
-<app-component-interaction-child [step]="stepValue" (quit)="onChildQuit()"></app-component-interaction-child>
+<app-component-interaction-child></app-component-interaction-child>
 

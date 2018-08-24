@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { ChildComponent } from '../child/child.component';
 
 @Component({
   selector: 'app-component-interaction-parent',
@@ -6,8 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./parent.component.css']
 })
 export class ParentComponent implements OnInit {
-  stepValue = 0;
-  isQuited = false;
+  @ViewChild(ChildComponent) private childComponent: ChildComponent;
 
   constructor() { }
 
@@ -15,15 +15,14 @@ export class ParentComponent implements OnInit {
   }
 
   nextStep() {
-    this.stepValue += 1;
+    this.childComponent.nextStep();
   }
 
   startOver() {
-    this.stepValue = 0;
-    this.isQuited = false;
+    this.childComponent.startOver();
   }
 
-  onChildQuit() {
-    this.isQuited = true;
+  isQuited() {
+    return this.childComponent.isQuited;
   }
 }
