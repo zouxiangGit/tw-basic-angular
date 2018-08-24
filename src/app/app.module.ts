@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { TemplateSyntaxModule } from './template-syntax/template-syntax.module';
 import { RouterModule } from '@angular/router';
+import { LifecycleModule } from './lifecycle/lifecycle.module';
 
 @NgModule({
   declarations: [
@@ -12,7 +13,8 @@ import { RouterModule } from '@angular/router';
   imports: [
     BrowserModule,
     RouterModule,
-    TemplateSyntaxModule
+    TemplateSyntaxModule,
+    LifecycleModule
   ],
   providers: [],
   bootstrap: [AppComponent]
