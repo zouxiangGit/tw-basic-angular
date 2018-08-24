@@ -1,0 +1,51 @@
+
+<section>
+  <h1>绑定</h1>
+  <p>
+    <!--用插值表达式显示名字-->
+    Hello, xxx
+    <!--用插值表达式替换图片路径-->
+    <img src="" />
+  </p>
+
+  <p>
+    <!--用插值表达式/或者方法输出名字的长度-->
+    Your name length is xxx
+  </p>
+
+  <div>
+    <!--属性绑定-->
+    <img [src]="" />
+    <!--name为空时button不可点击-->
+    <button [disabled]="false" (click)="showName()">Alert Name</button>
+    <!--给button添加class属性buttonClass-->
+    <button>Primary Button</button>
+    <!--给文字设置内联样式spanStyle-->
+    <p [style.color]="'red'">
+      Set font style for span:
+      <span>name</span>
+    </p>
+  </div>
+
+  <div>
+    <!--双向数据绑定输入name-->
+    <input placeholder="输入name" />
+  </div>
+
+  <div>
+    <!--点击button触发clearName方法-->
+    <button>Clear Name</button>
+  </div>
+</section>
+
+<section>
+  <h1>内置结构型指令</h1>
+
+  <button (click)="hidden=!hidden">{{hidden ? '显示': '隐藏'}}</button>
+
+  <!--显示隐藏p元素-->
+  <p>hello world </p>
+
+  <!--重复器指令显示列表names-->
+  <p>Hello, xxx</p>
+</section>
