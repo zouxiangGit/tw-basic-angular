@@ -1,0 +1,16 @@
+<header>
+  <h1>内置管道</h1>
+  <a href="https://angular.cn/api?type=pipe">https://angular.cn/api?type=pipe</a>
+</header>
+
+<section>
+  <p>The hero's birthday is {{ birthday | date:"yyyy年MM月dd日" }} </p>
+
+  <p>The chained hero's birthday is {{ birthday | date | uppercase}}</p>
+
+  <p>The hero's birthday is {{ birthday | date:format }}</p>
+  <button (click)="toggleFormat()">Toggle Format</button>
+</section>
+
+
+

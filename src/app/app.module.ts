@@ -8,6 +8,7 @@ import { LifecycleModule } from './lifecycle/lifecycle.module';
 import { SharedModule } from './shared/shared.module';
 import { ComponentInteractionModule } from './component-interaction/component-interaction.module';
 import { DirectiveModule } from './directive/directive.module';
+import { PipeModule } from './pipe/pipe.module';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { DirectiveModule } from './directive/directive.module';
     TemplateSyntaxModule,
     LifecycleModule,
     ComponentInteractionModule,
-    DirectiveModule
+    DirectiveModule,
+    PipeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
