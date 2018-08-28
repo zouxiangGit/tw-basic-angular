@@ -5,10 +5,11 @@ import { AppComponent } from './app.component';
 import { TemplateSyntaxModule } from './template-syntax/template-syntax.module';
 import { RouterModule } from '@angular/router';
 import { LifecycleModule } from './lifecycle/lifecycle.module';
-import { SharedModule } from './shared/shared.module';
 import { ComponentInteractionModule } from './component-interaction/component-interaction.module';
 import { DirectiveModule } from './directive/directive.module';
 import { PipeModule } from './pipe/pipe.module';
+import { CoreModule } from './core/core.module';
+import { ServiceInjectionModule } from './service-injection/service-injection.module';
 
 @NgModule({
   declarations: [
@@ -17,12 +18,13 @@ import { PipeModule } from './pipe/pipe.module';
   imports: [
     BrowserModule,
     RouterModule,
-    SharedModule,
+    CoreModule,
     TemplateSyntaxModule,
     LifecycleModule,
     ComponentInteractionModule,
     DirectiveModule,
-    PipeModule
+    PipeModule,
+    ServiceInjectionModule
   ],
   providers: [],
   bootstrap: [AppComponent]

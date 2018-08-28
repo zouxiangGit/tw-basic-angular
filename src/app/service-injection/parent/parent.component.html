@@ -1,0 +1,15 @@
+<section>
+  <h1>Parent Component</h1>
+  <div class="root">
+    <p class="root-value">{{rootService.value}}</p>
+    <p class="module-value">{{moduleService.value}}</p>
+    <p class="parent-value">{{parentService.value}}</p>
+    <button (click)="changeRootValue()">修改 Root Value</button>
+    <button (click)="changeParentValue()">修改 Parent Value</button>
+  </div>
+
+  <div class="wrapper">
+    <app-child-a></app-child-a>
+    <app-child-b></app-child-b>
+  </div>
+</section>

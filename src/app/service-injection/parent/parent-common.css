@@ -1,0 +1,23 @@
+:host {
+  display: block;
+  border: 1px solid black;
+  background-color: rgba(200, 200, 200, 0.2);
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.root-value {
+  color: dodgerblue;
+}
+
+.module-value {
+  color: forestgreen;
+}
+
+.parent-value {
+  color: palevioletred;
+}
+
+.child-value {
+  color: lightseagreen;
+}

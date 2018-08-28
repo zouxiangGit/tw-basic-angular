@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { RootService } from './core/root.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+
+  constructor ( public rootService: RootService ) {}
+
   title = 'tw-basic-angular';
+
+  changeRootValue() {
+    this.rootService.changeValue();
+  }
 }

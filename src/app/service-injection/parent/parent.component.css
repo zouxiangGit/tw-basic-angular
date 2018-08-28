@@ -1,0 +1,13 @@
+.root {
+  margin-bottom: 20px;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+app-child-a, app-child-b {
+  width: 50%;
+  margin-right: 20px;
+}
