@@ -4,11 +4,13 @@ import { LoggerService } from '../../shared/logger.service';
 @Component ({
   selector: 'app-lifecycle-exercise',
   templateUrl: './exercise.component.html',
-  styleUrls: [ './exercise.component.css' ],
+  styleUrls: [ '../example/example.component.css' ],
 })
 export class ExerciseComponent implements OnInit {
-  item = 'name';
-  hasItem = false;
+  sharedValue = 'shared value';
+  valueA = 'value a';
+  hasItemA = false;
+  hasItemB = false;
   hookLog: string[];
 
   constructor (public logger: LoggerService) {
@@ -16,29 +18,58 @@ export class ExerciseComponent implements OnInit {
   }
 
   ngOnInit (): void {
-    this.hasItem = true;
-    this.logger.tick();
-    this.logger.log('---------Created---------');
+    // this.hasItemA = true;
+    // this.logger.tick();
+    // this.logger.log('---------A Created---------');
+    // this.hasItemB = true;
+    // this.logger.tick();
+    // this.logger.log('---------B Created---------');
   }
 
-  updateItem () {
-    this.item = 'NEW ' + this.item;
+  updateSharedValue () {
+    this.sharedValue = 'NEW ' + this.sharedValue;
     this.logger.tick();
-    this.logger.log('---------Changed---------');
+    this.logger.log('---------A & B Changed---------');
   }
 
-  removeItem() {
-    this.hasItem = !this.hasItem;
-    if (this.hasItem) {
-      this.item = 'name';
-      this.logger.clear();
+  updateValueA () {
+    this.valueA = 'NEW ' + this.valueA;
+    this.logger.tick();
+    this.logger.log('---------A Changed---------');
+  }
+
+  removeItemA() {
+    this.hasItemA = !this.hasItemA;
+    if (this.hasItemA) {
+      this.valueA = 'value a';
+      this.sharedValue = 'shared value';
+      if (!this.hasItemB) {
+        this.logger.clear();
+      }
       this.hookLog = this.logger.logs;
       this.logger.tick();
-      this.logger.log('---------Recreated---------');
+      this.logger.log('---------A Created---------');
     } else {
       this.hookLog = this.logger.logs;
       this.logger.tick();
-      this.logger.log('---------Deleted---------');
+      this.logger.log('---------A Deleted---------');
+    }
+  }
+
+  removeItemB() {
+    this.hasItemB = !this.hasItemB;
+    if (this.hasItemB) {
+      this.sharedValue = 'shared value';
+      if (!this.hasItemA) {
+        this.logger.clear();
+      }
+      this.hookLog = this.logger.logs;
+      this.logger.tick();
+      this.logger.log('---------B Created---------');
+    } else {
+      this.hookLog = this.logger.logs;
+      this.logger.tick();
+      this.logger.log('---------B Deleted---------');
     }
   }
 }

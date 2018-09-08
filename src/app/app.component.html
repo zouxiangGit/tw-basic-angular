@@ -3,8 +3,12 @@
     <li>
       <a [routerLink]="'/template-syntax'">Template Syntax</a>
     </li>
-    <li>
+    <li (mouseenter)="showLifecycleList=true" (mouseleave)="showLifecycleList=false">
       <a [routerLink]="'/lifecycle'">Lifecycle</a>
+      <ul *ngIf="showLifecycleList">
+        <li><a [routerLink]="'/lifecycle'">演示</a></li>
+        <li><a [routerLink]="'/lifecycle/exercise'">练习</a></li>
+      </ul>
     </li>
     <li>
       <a [routerLink]="'/component-interaction'">Component Interaction</a>

@@ -3,9 +3,12 @@
   <div *ngFor="let log of hookLog">{{log}}</div>
 </section>
 
-<app-lifecycle-exercise-item [value]="item" *ngIf="hasItem"></app-lifecycle-exercise-item>
+<app-lifecycle-item-a [value]="valueA" [sharedValue]="sharedValue" *ngIf="hasItemA"></app-lifecycle-item-a>
+<app-lifecycle-item-b [sharedValue]="sharedValue" *ngIf="hasItemB"></app-lifecycle-item-b>
 
 <section>
-  <button (click)="updateItem()" *ngIf="hasItem">更新组件</button>
-  <button (click)="removeItem()">{{!hasItem? '重建组件':'删除组件'}}</button>
+  <button (click)="updateSharedValue()" *ngIf="hasItemA || hasItemB">更新sharedValue</button>
+  <button (click)="updateValueA()" *ngIf="hasItemA">更新ValueA</button>
+  <button (click)="removeItemA()">{{!hasItemA? '重建组件A':'删除组件A'}}</button>
+  <button (click)="removeItemB()">{{!hasItemB? '重建组件B':'删除组件B'}}</button>
 </section>
