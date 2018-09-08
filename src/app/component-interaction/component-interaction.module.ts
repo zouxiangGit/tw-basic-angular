@@ -6,6 +6,8 @@ import { EventInteractionChildComponent } from './event/child/child.component';
 import { SharedModule } from '../shared/shared.module';
 import { LocalVariableInteractionComponent } from './local-variable/local-variable.component';
 import { LocalVariableInteractionChildComponent } from './local-variable/child/child.component';
+import { ViewChildInteractionComponent } from './viewchild/viewchild.component';
+import { ViewChildInteractionChildComponent } from './viewchild/child/child.component';
 
 @NgModule({
   imports: [
@@ -17,6 +19,9 @@ import { LocalVariableInteractionChildComponent } from './local-variable/child/c
     }, {
       path: 'component-interaction/local-variable',
       component: LocalVariableInteractionComponent
+    }, {
+      path: 'component-interaction/viewchild',
+      component: ViewChildInteractionComponent
     }
     ])
   ],
@@ -24,7 +29,9 @@ import { LocalVariableInteractionChildComponent } from './local-variable/child/c
     EventInteractionComponent,
     EventInteractionChildComponent,
     LocalVariableInteractionComponent,
-    LocalVariableInteractionChildComponent
+    LocalVariableInteractionChildComponent,
+    ViewChildInteractionComponent,
+    ViewChildInteractionChildComponent
   ]
 })
 export class ComponentInteractionModule { }
