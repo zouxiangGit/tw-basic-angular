@@ -8,6 +8,8 @@ import { LocalVariableInteractionComponent } from './local-variable/local-variab
 import { LocalVariableInteractionChildComponent } from './local-variable/child/child.component';
 import { ViewChildInteractionComponent } from './viewchild/viewchild.component';
 import { ViewChildInteractionChildComponent } from './viewchild/child/child.component';
+import { ServiceInteractionComponent } from './service/service.component';
+import { ServiceInteractionChildComponent } from './service/child/child.component';
 
 @NgModule({
   imports: [
@@ -22,8 +24,10 @@ import { ViewChildInteractionChildComponent } from './viewchild/child/child.comp
     }, {
       path: 'component-interaction/viewchild',
       component: ViewChildInteractionComponent
-    }
-    ])
+    }, {
+      path: 'component-interaction/service',
+      component: ServiceInteractionComponent
+    }])
   ],
   declarations: [
     EventInteractionComponent,
@@ -31,7 +35,9 @@ import { ViewChildInteractionChildComponent } from './viewchild/child/child.comp
     LocalVariableInteractionComponent,
     LocalVariableInteractionChildComponent,
     ViewChildInteractionComponent,
-    ViewChildInteractionChildComponent
+    ViewChildInteractionChildComponent,
+    ServiceInteractionComponent,
+    ServiceInteractionChildComponent
   ]
 })
 export class ComponentInteractionModule { }

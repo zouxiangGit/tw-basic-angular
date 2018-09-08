@@ -2,7 +2,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { EventInteractionChildComponent } from './child.component';
 
-describe('EventInteractionChildComponent', () => {
+describe('ServiceInteractionChildComponent', () => {
   let component: EventInteractionChildComponent;
   let fixture: ComponentFixture<EventInteractionChildComponent>;
 
