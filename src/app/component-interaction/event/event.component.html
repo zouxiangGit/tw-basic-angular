@@ -3,5 +3,5 @@
 <button (click)="nextStep()" [disabled]="isQuited">Next Step</button>
 <button (click)="startOver()">Start Over</button>
 
-<app-component-interaction-child [step]="stepValue" (quit)="onChildQuit()"></app-component-interaction-child>
+<app-event-interaction-child [step]="stepValue" (quit)="onChildQuit()"></app-event-interaction-child>
 

@@ -1,7 +1,7 @@
 import { Component, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChanges } from '@angular/core';
 
 @Component({
-  selector: 'app-component-interaction-child',
+  selector: 'app-event-interaction-child',
   templateUrl: './child.component.html',
   styleUrls: ['./child.component.css']
 })

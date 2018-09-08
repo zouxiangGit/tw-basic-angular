@@ -1,18 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-component-interaction-parent',
-  templateUrl: './parent.component.html',
-  styleUrls: ['./parent.component.css']
+  selector: 'app-event-interaction',
+  templateUrl: './event.component.html'
 })
-export class ParentComponent implements OnInit {
+export class EventInteractionComponent {
   stepValue = 0;
   isQuited = false;
 
   constructor() { }
-
-  ngOnInit() {
-  }
 
   nextStep() {
     this.stepValue += 1;

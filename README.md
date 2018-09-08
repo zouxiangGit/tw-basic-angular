@@ -4,3 +4,6 @@ https://angular.cn/guide/architecture-components#template-syntax
 ## 生命周期钩子
 https://angular.cn/guide/lifecycle-hooks
 
+## 组件交互
+https://angular.cn/guide/component-interaction
+
