@@ -1,0 +1,11 @@
+<section>
+  <h4>-- Lifecycle for <strong [style.color]="'blue'">Child</strong> --</h4>
+  <div *ngFor="let log of hookLog">{{log}}</div>
+</section>
+
+<app-lifecycle-item [value]="item" *ngIf="hasItem"></app-lifecycle-item>
+
+<section>
+  <button (click)="updateItem()" *ngIf="hasItem">更新组件</button>
+  <button (click)="removeItem()">{{!hasItem? '重建组件':'删除组件'}}</button>
+</section>

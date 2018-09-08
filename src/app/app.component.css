@@ -9,6 +9,7 @@ ul {
 }
 
 li {
+  position: relative;
   margin-right: 20px;
   display: inline-block;
   width: 200px;
@@ -16,4 +17,10 @@ li {
   line-height: 30px;
   border: 1px solid black;
   text-align: center;
+}
+
+li > ul {
+  position: absolute;
+  top: 30px;
+  left: 0;
 }
