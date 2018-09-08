@@ -18,12 +18,6 @@ export class ExerciseComponent implements OnInit {
   }
 
   ngOnInit (): void {
-    // this.hasItemA = true;
-    // this.logger.tick();
-    // this.logger.log('---------A Created---------');
-    // this.hasItemB = true;
-    // this.logger.tick();
-    // this.logger.log('---------B Created---------');
   }
 
   updateSharedValue () {
