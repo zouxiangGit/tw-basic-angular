@@ -1,17 +1,23 @@
 <nav>
   <ul>
     <li>
-      <a [routerLink]="'/template-syntax'">Template Syntax</a>
+      <a [routerLink]="'/template-syntax'">模板语法</a>
     </li>
     <li (mouseenter)="showLifecycleList=true" (mouseleave)="showLifecycleList=false">
-      <a [routerLink]="'/lifecycle'">Lifecycle</a>
+      <a [routerLink]="'/lifecycle'">生命周期</a>
       <ul *ngIf="showLifecycleList">
         <li><a [routerLink]="'/lifecycle'">演示</a></li>
         <li><a [routerLink]="'/lifecycle/exercise'">练习</a></li>
       </ul>
     </li>
-    <li>
-      <a [routerLink]="'/component-interaction'">Component Interaction</a>
+    <li (mouseenter)="showInteractionList=true" (mouseleave)="showInteractionList=false">
+      <a [routerLink]="'/component-interaction'">组件交互</a>
+      <ul *ngIf="showInteractionList">
+        <li><a [routerLink]="'/component-interaction'">事件</a></li>
+        <li><a [routerLink]="'/component-interaction/local-variable'">本地变量</a></li>
+        <li><a [routerLink]="'/component-interaction/viewchild'">ViewChild</a></li>
+        <li><a [routerLink]="'/component-interaction/service'">服务</a></li>
+      </ul>
     </li>
     <li>
       <a [routerLink]="'/directive'">Directive</a>

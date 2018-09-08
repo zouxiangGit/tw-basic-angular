@@ -12,6 +12,7 @@ export class AppComponent {
 
   title = 'tw-basic-angular';
   showLifecycleList = false;
+  showInteractionList = false;
 
   changeRootValue() {
     this.rootService.changeValue();

@@ -1,0 +1,7 @@
+<h4>Parent Component</h4>
+
+<button (click)="child.nextStep()" [disabled]="child.isQuited">Next Step</button>
+<button (click)="child.startOver()">Start Over</button>
+
+<app-local-variable-interaction-child #child></app-local-variable-interaction-child>
+

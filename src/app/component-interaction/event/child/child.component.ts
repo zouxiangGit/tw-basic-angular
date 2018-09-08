@@ -5,7 +5,7 @@ import { Component, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChange
   templateUrl: './child.component.html',
   styleUrls: ['./child.component.css']
 })
-export class ChildComponent implements OnInit, OnChanges {
+export class EventInteractionChildComponent implements OnInit, OnChanges {
   @Input() step;
   @Output() quit = new EventEmitter<any>();
   stepArray = [];

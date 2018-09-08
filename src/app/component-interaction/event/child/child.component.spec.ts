@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ChildComponent } from './child.component';
+import { EventInteractionChildComponent } from './child.component';
 
-describe('ChildComponent', () => {
-  let component: ChildComponent;
-  let fixture: ComponentFixture<ChildComponent>;
+describe('EventInteractionChildComponent', () => {
+  let component: EventInteractionChildComponent;
+  let fixture: ComponentFixture<EventInteractionChildComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ChildComponent ]
+      declarations: [ EventInteractionChildComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ChildComponent);
+    fixture = TestBed.createComponent(EventInteractionChildComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
